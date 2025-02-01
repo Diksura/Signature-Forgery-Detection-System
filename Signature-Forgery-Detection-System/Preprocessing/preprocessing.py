@@ -5,10 +5,14 @@ import matplotlib.pyplot as plt
 
 # --------------------------------------------------------------------------------------------------------------------------------------------
 # Paths
+datasetDir_path = "./Signature-Forgery-Detection-System/Dataset"
+
 input_folder = "./Signature-Forgery-Detection-System/Dataset/HybridDataset"
 output_folder = "./Signature-Forgery-Detection-System/Dataset/PreprocessedDataset"
 
+
 # Ensure output directories exist
+os.makedirs(os.path.join(datasetDir_path, "PreprocessedDataset"), exist_ok=True)
 os.makedirs(os.path.join(output_folder, "Genuine"), exist_ok=True)
 os.makedirs(os.path.join(output_folder, "Forged"), exist_ok=True)
 
@@ -69,6 +73,7 @@ test_dir = "./Signature-Forgery-Detection-System/Dataset/Dataset_Split/Test"
 train_ratio = 0.8  
 
 # Ensure directories exist
+os.makedirs(os.path.join(datasetDir_path, "Dataset_Split"), exist_ok=True)
 for category in ["Genuine", "Forged"]:
     os.makedirs(os.path.join(train_dir, category), exist_ok=True)
     os.makedirs(os.path.join(test_dir, category), exist_ok=True)
