@@ -101,7 +101,7 @@ plt.show()
 
 # --------------------------------------------------------------------------------------------------------------------------------------------
 # Load the model
-model = tf.keras.models.load_model("signature_cnn_model.h5")
+model = tf.keras.models.load_model("signature_cnn_model.keras")
 
 # Generate predictions
 y_true = test_generator.classes  # True labels
