@@ -2,10 +2,13 @@ import os
 import shutil
 
 # Target Paths
+datasetDir_path = "./Signature-Forgery-Detection-System/Dataset"
+
 target_genuine = "./Signature-Forgery-Detection-System/Dataset/HybridDataset/Genuine"
 target_forged = "./Signature-Forgery-Detection-System/Dataset/HybridDataset/Forged"
 
 # Create target folders if not exist
+os.makedirs(os.path.join(datasetDir_path, "HybridDataset"), exist_ok=True)
 os.makedirs(target_genuine, exist_ok=True)
 os.makedirs(target_forged, exist_ok=True)
 
