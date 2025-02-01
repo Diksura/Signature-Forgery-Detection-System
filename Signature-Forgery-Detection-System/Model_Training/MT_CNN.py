@@ -1,6 +1,6 @@
 import tensorflow as tf
 from tensorflow import keras
-from tensorflow.keras import layers
+from keras import layers
 
 
 # --------------------------------------------------------------------------------------------------------------------------------------------
@@ -29,7 +29,7 @@ def build_cnn_model(input_shape=(128, 256, 1)):
     return model
 
 # --------------------------------------------------------------------------------------------------------------------------------------------
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from keras import ImageDataGenerator
 
 # Define data directories
 train_dir = "./Signature-Forgery-Detection-System/Dataset/Dataset_Split/Train"
