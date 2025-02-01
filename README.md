@@ -8,7 +8,7 @@ Setup:
         activate enviroment : env\Scripts\activate
         install openCV      : pip install opencv-python
         install matplotlib  : pip install matplotlib
-        install tensorflow  :
+        install tensorflow  : pip install tensorflow
 
 
 
