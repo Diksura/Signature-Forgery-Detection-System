@@ -2,6 +2,11 @@ import tensorflow as tf
 from tensorflow import keras
 from keras import layers
 
+import matplotlib.pyplot as plt
+from sklearn.metrics import classification_report
+import numpy as np
+from sklearn.metrics import confusion_matrix
+import seaborn as sns
 
 # --------------------------------------------------------------------------------------------------------------------------------------------
 # Define the CNN model
@@ -29,7 +34,7 @@ def build_cnn_model(input_shape=(128, 256, 1)):
     return model
 
 # --------------------------------------------------------------------------------------------------------------------------------------------
-from keras import ImageDataGenerator
+from keras._tf_keras.keras.preprocessing.image import ImageDataGenerator
 
 # Define data directories
 train_dir = "./Signature-Forgery-Detection-System/Dataset/Dataset_Split/Train"
@@ -66,7 +71,56 @@ history = cnn_model.fit(
 )
 
 # Save the trained model
-cnn_model.save("signature_cnn_model.h5")
+cnn_model.save("signature_cnn_model.keras")
+
 
 # --------------------------------------------------------------------------------------------------------------------------------------------
+# EVALUATION AND VALIDATION ACCURACY
+# --------------------------------------------------------------------------------------------------------------------------------------------
 
+# Plot training & validation accuracy
+plt.plot(history.history['accuracy'], label='Train Accuracy')
+plt.plot(history.history['val_accuracy'], label='Validation Accuracy')
+plt.xlabel('Epochs')
+plt.ylabel('Accuracy')
+plt.legend()
+plt.title("Model Accuracy")
+plt.show()
+
+# Plot training & validation loss
+plt.plot(history.history['loss'], label='Train Loss')
+plt.plot(history.history['val_loss'], label='Validation Loss')
+plt.xlabel('Epochs')
+plt.ylabel('Loss')
+plt.legend()
+plt.title("Model Loss")
+plt.show()
+
+
+
+
+# --------------------------------------------------------------------------------------------------------------------------------------------
+# Load the model
+model = tf.keras.models.load_model("signature_cnn_model.h5")
+
+# Generate predictions
+y_true = test_generator.classes  # True labels
+y_pred = model.predict(test_generator)  # Predicted probabilities
+y_pred = np.where(y_pred > 0.5, 1, 0)  # Convert probabilities to binary labels
+
+# Print classification report
+print(classification_report(y_true, y_pred, target_names=["Genuine", "Forgery"]))
+
+
+
+# --------------------------------------------------------------------------------------------------------------------------------------------
+# Compute confusion matrix
+cm = confusion_matrix(y_true, y_pred)
+
+# Plot confusion matrix
+plt.figure(figsize=(6,5))
+sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", xticklabels=["Genuine", "Forgery"], yticklabels=["Genuine", "Forgery"])
+plt.xlabel("Predicted")
+plt.ylabel("Actual")
+plt.title("Confusion Matrix")
+plt.show()
