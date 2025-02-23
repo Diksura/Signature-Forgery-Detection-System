@@ -2,7 +2,10 @@
 
 Setup:
     MacOS: 
-
+        activate enviroment : 
+        install openCV      : pip install opencv-python
+        install matplotlib  : pip install matplotlib
+        install tensorflow  : pip install tensorflow
 
     Windows: 
         activate enviroment : env\Scripts\activate
