@@ -7,7 +7,7 @@ import subprocess
 
 ## -----------------------------------------------------------------------------------------------------------
 ## Packages Installations
-subprocess.run(["pip", "install", "-r", "requirements.txt"], check=True)
+subprocess.run(["pip", "install", "-r", "./SignatureForgeryDetectionSystem/requirements.txt"], check=True)
 
 
 ## -----------------------------------------------------------------------------------------------------------
