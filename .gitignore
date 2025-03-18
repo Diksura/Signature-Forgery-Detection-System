@@ -4,3 +4,4 @@ Dataset/
 env/
 *.keras
 *.h5
+*.pyc
