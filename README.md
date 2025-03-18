@@ -34,3 +34,16 @@ Error Handling:
             Set-ExecutionPolicy Unrestricted -Scope Process
             ** (This would allow running virtualenv in the current PowerShell session)
 
+# Start Backend
+
+Navigate to the file location
+    cd SignatureForgeryDetectionSystem/Apllication/Backend
+
+Start the FastAPI Server:
+    uvicorn Signature_Forgery_Backend:app --host 0.0.0.0 --port 8000 --reload
+
+Test the API Using Swagger UI
+    http://127.0.0.1:8000/docs
+    
+pip install uvicorn
+pip install fastapi
