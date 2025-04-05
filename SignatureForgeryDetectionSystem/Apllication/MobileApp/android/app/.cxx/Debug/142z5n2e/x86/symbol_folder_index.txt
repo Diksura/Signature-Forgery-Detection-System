@@ -1,0 +1,1 @@
+/Users/pasan_diksura/Documents/SoftwareDevelopment/Projects/Signature-Forgery-Detection-System/SignatureForgeryDetectionSystem/Apllication/MobileApp/build/app/intermediates/cxx/Debug/142z5n2e/obj/x86

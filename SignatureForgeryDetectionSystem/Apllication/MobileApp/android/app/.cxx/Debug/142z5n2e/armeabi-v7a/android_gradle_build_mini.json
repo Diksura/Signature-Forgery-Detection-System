@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "/Users/pasan_diksura/Developer/Flutter/flutter/packages/flutter_tools/gradle/src/main/groovy/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/pasan_diksura/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/pasan_diksura/Documents/SoftwareDevelopment/Projects/Signature-Forgery-Detection-System/SignatureForgeryDetectionSystem/Apllication/MobileApp/android/app/.cxx/Debug/142z5n2e/armeabi-v7a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/pasan_diksura/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/pasan_diksura/Documents/SoftwareDevelopment/Projects/Signature-Forgery-Detection-System/SignatureForgeryDetectionSystem/Apllication/MobileApp/android/app/.cxx/Debug/142z5n2e/armeabi-v7a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}
