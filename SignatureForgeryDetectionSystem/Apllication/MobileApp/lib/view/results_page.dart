@@ -36,7 +36,7 @@ class _ResultsPageState extends State<ResultsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Results"),
+        title: Text((_isProcessDone) ? "" : "Results"),
       ),
       body: SafeArea(
         child: Padding(
