@@ -1,6 +1,6 @@
 # signex
 
-Signature Forgery Detection App using Hybrid Machine Leraning Model.
+Signature Forgery Detection App using Hybrid Machine Learning Model.
 
 ## Getting Started
 
