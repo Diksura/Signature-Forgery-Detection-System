@@ -19,7 +19,7 @@ class _SignatureVerification1State extends State<SignatureVerification> {
 
   // Pick an image from gallery or camera
   Future<void> _pickImage(ImageSource source) async {
-    final pickedFile = await _picker.pickImage(source: ImageSource.gallery);
+    final pickedFile = await _picker.pickImage(source: source);
 
     if (pickedFile != null) {
       setState(() {
