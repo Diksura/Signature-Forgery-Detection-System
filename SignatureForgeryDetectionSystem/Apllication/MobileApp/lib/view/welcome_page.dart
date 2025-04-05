@@ -51,7 +51,7 @@ class _WelcomePageState extends State<WelcomePage> {
                   padding: const EdgeInsets.only(top: 120.0, bottom: 18.0),
                   child: OutlinedButton(
                     onPressed: () {
-                      Navigator.push(
+                      Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(builder: (context) => const SignatureVerification()),
                       );
