@@ -11,7 +11,10 @@ class Connectivity {
 
   Future<VerifyResults> sendRequest() async {
     // Local Testing
-    const String apiUrl = "http://127.0.0.1:5000/predict";
+    // const String apiUrl = "http://127.0.0.1:5000/predict";
+
+    // Google Cloud Host
+    const String apiUrl = "https://signature-forgery-model-966374620579.us-central1.run.app/predict";
 
     try {
       var request = http.MultipartRequest('POST', Uri.parse(apiUrl));
