@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:signx/view/prediction_screen.dart';
 import 'package:signx/view/widgets/verify_type_selector.dart';
 
-import '../utility/background_gradient.dart';
+import '../constants/background_gradient.dart';
 
-class MainScreen extends StatelessWidget {
-  const MainScreen({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          gradient: buildBGLinearGradient(),
+          gradient: kBGLinearGradient,
         ),
         child: SafeArea(
           child: Padding(
@@ -44,7 +44,7 @@ class MainScreen extends StatelessWidget {
                 // Feature cards
                 VerifyTypeSelector(
                   name: 'Signature Validation',
-                  description: 'Check if a signature is genuine.',
+                  description: 'Check if a signature is genuine by comparing.',
                   color: const Color(0xFF6C63FF),
                   iconData: Icons.verified_user_outlined,
                   onTap: () {},
