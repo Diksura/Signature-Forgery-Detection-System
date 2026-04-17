@@ -29,16 +29,10 @@ class _PredictionResultScreenState extends State<PredictionResultScreen> {
 
   Future<void> _runPrediction() async {
     try {
-      _result = await Connectivity().sendPredictionRequest(widget.image);
-
-      final mockResult = VerifyResult(
-        status: 200,
-        confidence: 0.87,
-        result: Result.genuine,
-      );
+      var getResults = await Connectivity().sendPredictionRequest(widget.image);
 
       setState(() {
-        _result = mockResult;
+        _result = getResults;
         _isLoading = false;
       });
     } catch (e) {
@@ -154,7 +148,7 @@ class _PredictionResultScreenState extends State<PredictionResultScreen> {
                         color: Colors.white,
                       ),
                       children: [
-                        TextSpan(text: "95"), // main number
+                        TextSpan(text: "${result.confidence.round()}"), // main number
                         TextSpan(
                           text: " %",
                           style: TextStyle(
