@@ -1,4 +1,4 @@
-package dev.pasandiksura.signx.signx
+package com.pasandiksura.signex
 
 import io.flutter.embedding.android.FlutterActivity
 
