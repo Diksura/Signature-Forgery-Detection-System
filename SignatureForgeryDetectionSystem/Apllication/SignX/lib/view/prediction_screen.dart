@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:signx/view/prediction_results_screen.dart';
+import 'package:signx/view/widgets/ps_privacy_police.dart';
 import 'package:signx/view_model/image_picker.dart';
 
 import '../constants/background_gradient.dart';
@@ -42,10 +43,24 @@ class _PredictionScreenState extends State<PredictionScreen> {
     }
   }
 
+  void _showPrivacyInfo(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (context) => const PsPrivacyPolice(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Forgery Prediction'), elevation: 0, backgroundColor: Colors.transparent),
+      appBar: AppBar(
+        title: const Text('Forgery Prediction'),
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        actions: [IconButton(icon: const Icon(Icons.info_outline), onPressed: () => _showPrivacyInfo(context))],
+      ),
       extendBodyBehindAppBar: true,
       body: Container(
         width: double.infinity,
@@ -84,12 +99,12 @@ class _PredictionScreenState extends State<PredictionScreen> {
                         width: double.infinity,
                         padding: const EdgeInsets.all(20),
                         decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.7),
+                          color: Colors.white.withValues(alpha: 0.7),
                           borderRadius: BorderRadius.circular(24),
                           border: Border.all(color: Colors.white),
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.black.withOpacity(0.06),
+                              color: Colors.black.withValues(alpha: 0.06),
                               blurRadius: 20,
                               offset: const Offset(0, 10),
                             ),
@@ -109,6 +124,12 @@ class _PredictionScreenState extends State<PredictionScreen> {
                                   Text(
                                     "PNG, JPG from camera or gallery",
                                     style: TextStyle(fontSize: 12, color: Colors.grey),
+                                  ),
+                                  // TODO
+                                  Text(
+                                    "Note: Our AI model is continuously improving. While accuracy may vary, enhancements are actively in progress.",
+                                    style: TextStyle(fontSize: 9, color: Colors.grey,),
+                                    textAlign: TextAlign.center,
                                   ),
                                 ],
                               )
