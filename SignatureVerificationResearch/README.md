@@ -41,5 +41,19 @@ SignatureVerificationResearch/
     After Process Review -->
         docs/phase1_integrity_review.md
 
-2. Phase 1B - 
+2. Phase 1B - Image-content quality validation
     
+
+    src/audit_datasets.py
+
+    Output -->
+        data/manifests/candidate_unique_manifest.csv
+        data/manifests/curation_review.csv
+        data/manifests/curation_summary.json
+
+    Terminal Output -->
+        docs/Terminal/Phase 1B Terminal Output
+
+
+    After Process Review -->
+        

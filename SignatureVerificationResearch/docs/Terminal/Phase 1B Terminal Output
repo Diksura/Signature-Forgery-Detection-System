@@ -1,0 +1,27 @@
+(.venv) pasan_diksura@Pasans-MacBook-Pro SignatureVerificationResearch % python src/prepare_curation.py
+{
+  "warning": "Provisional metadata-only curation. No images inspected. NOT training approved.",
+  "original_image_count": 24960,
+  "curation_status_counts": {
+    "CANDIDATE_ONLY": 19407,
+    "HOLD_BENGALI_QUALITY": 5400,
+    "QUARANTINE_CONFLICTING_HASH": 2,
+    "QUARANTINE_WRITER_ID": 108,
+    "REDUNDANT_EXACT_COPY": 43
+  },
+  "candidate_count": 19407,
+  "candidate_by_dataset": {
+    "BHSig260/Hindi": 8500,
+    "CEDAR/all": 2640,
+    "UTSig/all": 8267
+  },
+  "quarantined_hindi_writer_ids": [
+    "123",
+    "124"
+  ],
+  "held_bengali": true,
+  "total_duplicate_groups": 972,
+  "conflicting_hash_groups": 1,
+  "next_step": "Verify original dataset provenance and perform visual/label QA before any split or training."
+}
+(.venv) pasan_diksura@Pasans-MacBook-Pro SignatureVerificationResearch % 
