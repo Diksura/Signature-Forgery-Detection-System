@@ -1,0 +1,74 @@
+(.venv) pasan_diksura@Pasans-MacBook-Pro SignatureVerificationResearch % python -m pip install pillow
+Collecting pillow
+  Downloading pillow-12.3.0-cp315-cp315-macosx_11_0_arm64.whl.metadata (9.1 kB)
+Downloading pillow-12.3.0-cp315-cp315-macosx_11_0_arm64.whl (4.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 2.0 MB/s  0:00:02
+Installing collected packages: pillow
+Successfully installed pillow-12.3.0
+
+[notice] A new release of pip is available: 26.0.1 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+(.venv) pasan_diksura@Pasans-MacBook-Pro SignatureVerificationResearch % pip install --upgrade pip
+Requirement already satisfied: pip in ./.venv/lib/python3.15/site-packages (26.0.1)
+Collecting pip
+  Downloading pip-26.2.1-py3-none-any.whl.metadata (4.6 kB)
+Downloading pip-26.2.1-py3-none-any.whl (1.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 2.3 MB/s  0:00:00
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 26.0.1
+    Uninstalling pip-26.0.1:
+      Successfully uninstalled pip-26.0.1
+Successfully installed pip-26.2.1
+(.venv) pasan_diksura@Pasans-MacBook-Pro SignatureVerificationResearch % python src/audit_datasets.py
+Processed 1,000 / 24,977 files
+Processed 2,000 / 24,977 files
+Processed 3,000 / 24,977 files
+Processed 4,000 / 24,977 files
+Processed 5,000 / 24,977 files
+Processed 6,000 / 24,977 files
+Processed 7,000 / 24,977 files
+Processed 8,000 / 24,977 files
+Processed 9,000 / 24,977 files
+Processed 10,000 / 24,977 files
+Processed 11,000 / 24,977 files
+Processed 12,000 / 24,977 files
+Processed 13,000 / 24,977 files
+Processed 14,000 / 24,977 files
+Processed 15,000 / 24,977 files
+Processed 16,000 / 24,977 files
+Processed 17,000 / 24,977 files
+Processed 18,000 / 24,977 files
+Processed 19,000 / 24,977 files
+Processed 20,000 / 24,977 files
+Processed 21,000 / 24,977 files
+Processed 22,000 / 24,977 files
+Processed 23,000 / 24,977 files
+Processed 24,000 / 24,977 files
+
+Audit complete. Original images were not modified.
+{
+  "note": "File counts and names alone do not prove writer-label correctness; SHA-256 detects byte-identical files only.",
+  "root": "/Users/pasan_diksura/Documents/SoftwareDevelopment/Projects/Signature-Forgery-Detection-System/SignatureVerificationResearch/data/raw",
+  "image_count": 24960,
+  "by_dataset": {
+    "BHSig260": 14040,
+    "CEDAR": 2640,
+    "UTSig": 8280
+  },
+  "decode_status": {
+    "ok": 24960
+  },
+  "label_status": {
+    "consistent_filename": 24936,
+    "WRITER_ID_CONFLICT": 24
+  },
+  "issue_types": {
+    "WRITER_ID_CONFLICT": 24,
+    "COUNT_OR_SEQUENCE_MISMATCH": 1,
+    "EXACT_FILE_DUPLICATE": 972
+  },
+  "duplicate_group_count": 972
+}
+Output: /Users/pasan_diksura/Documents/SoftwareDevelopment/Projects/Signature-Forgery-Detection-System/SignatureVerificationResearch/data/manifests
+(.venv) pasan_diksura@Pasans-MacBook-Pro SignatureVerificationResearch %
