@@ -1,0 +1,54 @@
+{
+  "note": "File counts and names alone do not prove writer-label correctness; SHA-256 detects byte-identical files only.",
+  "root": "/Users/pasan_diksura/Documents/SoftwareDevelopment/Projects/Signature-Forgery-Detection-System/SignatureVerificationResearch/data/raw",
+  "image_count": 24960,
+  "non_image_files": [
+    ".DS_Store",
+    "BHSig260/.DS_Store",
+    "BHSig260/Bengali/.DS_Store",
+    "BHSig260/Bengali/Bengali_pairs.txt",
+    "BHSig260/Bengali/list.forgery",
+    "BHSig260/Bengali/list.genuine",
+    "BHSig260/Hindi/.DS_Store",
+    "BHSig260/Hindi/Hindi_pairs.txt",
+    "BHSig260/Hindi/list.forgery",
+    "BHSig260/Hindi/list.genuine",
+    "CEDAR/.DS_Store",
+    "CEDAR/Readme.txt",
+    "CEDAR/full_forg/Thumbs.db",
+    "CEDAR/full_org/Thumbs.db",
+    "UTSig/.DS_Store",
+    "UTSig/Forgery/.DS_Store",
+    "UTSig/Genuine/.DS_Store"
+  ],
+  "by_dataset": {
+    "BHSig260": 14040,
+    "CEDAR": 2640,
+    "UTSig": 8280
+  },
+  "by_dataset_and_class": {
+    "BHSig260/Bengali/forgery": 3000,
+    "BHSig260/Bengali/genuine": 2400,
+    "BHSig260/Hindi/forgery": 4800,
+    "BHSig260/Hindi/genuine": 3840,
+    "CEDAR/all/forgery": 1320,
+    "CEDAR/all/genuine": 1320,
+    "UTSig/all/genuine": 3105,
+    "UTSig/all/opposite_hand": 345,
+    "UTSig/all/simple_forgery": 4140,
+    "UTSig/all/skilled_forgery": 690
+  },
+  "decode_status": {
+    "ok": 24960
+  },
+  "label_status": {
+    "consistent_filename": 24936,
+    "WRITER_ID_CONFLICT": 24
+  },
+  "issue_types": {
+    "WRITER_ID_CONFLICT": 24,
+    "COUNT_OR_SEQUENCE_MISMATCH": 1,
+    "EXACT_FILE_DUPLICATE": 972
+  },
+  "duplicate_group_count": 972
+}
