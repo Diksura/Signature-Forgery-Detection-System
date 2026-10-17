@@ -1,11 +1,6 @@
 #!/usr/bin/env python3
 """Non-destructive structural, decoding, and SHA-256 audit for the research datasets.
 
-Put this file in SignatureVerificationResearch/src/ and run from anywhere:
-    python3 src/audit_datasets.py
-
-Requires: pip install pillow
-
 Original images remain unchanged. Output goes to data/manifests/.
 """
 from __future__ import annotations
