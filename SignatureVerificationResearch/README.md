@@ -1,4 +1,10 @@
-### File Structure
+## Requirements
+
+```shell
+pip install pillow
+```
+
+## File Structure
 
 ```
 SignatureVerificationResearch/
