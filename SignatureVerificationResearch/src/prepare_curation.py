@@ -1,18 +1,6 @@
 #!/usr/bin/env python3
 """Prepare a NON-DESTRUCTIVE, PROVISIONAL signature dataset curation review.
 
-Run at SignatureVerificationResearch root:
-  python src/prepare_curation.py
-
-Reads (does not modify):
-  data/manifests/dataset_manifest.csv
-  data/manifests/exact_duplicates.json
-
-Writes:
-  data/manifests/curation_review.csv
-  data/manifests/candidate_unique_manifest.csv
-  data/manifests/curation_summary.json
-
 IMPORTANT: The candidate manifest is NOT validated training data. Visual/content
 review, provenance, licenses, and experimental protocol must be approved first.
 """
