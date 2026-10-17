@@ -5,6 +5,7 @@
   "non_image_files": [
     ".DS_Store",
     "BHSig260/.DS_Store",
+    "BHSig260/.gitignore",
     "BHSig260/Bengali/.DS_Store",
     "BHSig260/Bengali/Bengali_pairs.txt",
     "BHSig260/Bengali/list.forgery",
@@ -14,11 +15,14 @@
     "BHSig260/Hindi/list.forgery",
     "BHSig260/Hindi/list.genuine",
     "CEDAR/.DS_Store",
+    "CEDAR/.gitignore",
     "CEDAR/Readme.txt",
     "CEDAR/full_forg/Thumbs.db",
     "CEDAR/full_org/Thumbs.db",
     "UTSig/.DS_Store",
+    "UTSig/.gitignore",
     "UTSig/Forgery/.DS_Store",
+    "UTSig/Forgery/Opposite Hand/.DS_Store",
     "UTSig/Genuine/.DS_Store"
   ],
   "by_dataset": {
